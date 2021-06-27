@@ -1,0 +1,28 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid d-flex justify-content-evenly">
+    <div class="navbar-brand flex-grow-1 mx-5">
+      <a class="navbar-brand">Welcome {{ request.user|title }}</a>
+    </div>
+
+    <form class="d-flex flex-grow-1" method="GET">
+      <input
+        class="form-control me-3"
+        type="search"
+        placeholder="Search a Task"
+        aria-label="Search"
+        name="search-area"
+        value="{{ search_input }}"
+      />
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    <div class="nav-item mx-5">
+      <!-- <a
+        class="navbar-link"
+        href="{% url 'logout' %}"
+        style="cursor: pointer; text-decoration: none; color: white"
+        >Logout</a
+      > -->
+      <a href="{% url 'logout' %}"><button class="btn btn-outline-danger my-2 my-sm-0">Logout</button></a>
+    </div>
+  </div>
+</nav>

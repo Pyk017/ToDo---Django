@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 2%, #e0c3fc 100%);
+}
+
+.card {
+  width: 50%;
+  margin-top: 5%;
+  padding: 20px;
+  border: none;
+  border-radius: 23px;
+  background: linear-gradient(145deg, #8ec5fc 2%, #e0c3fc 100%);
+  box-shadow: 24px 24px 49px #73a0cc, -24px -24px 49px #a9eaff;
+}
+
+.header {
+  width: 100%;
+}
+
+.txtb {
+  width: 95%;
+  border: none;
+  border-bottom: 2px solid #000;
+  background: none;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+}
+
+._plus {
+  float: right;
+  font-size: 35px;
+  color: black;
+  cursor: pointer;
+}
+
+h3 {
+  padding: 10px 0;
+}
+
+.task {
+  width: 100%;
+  /* background: rgba(255, 255, 255, 0.5); */
+  padding: 15px;
+  font-weight: bold;
+  margin: 6px 0;
+  overflow: hidden;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #8ec5fc 2%, #e0c3fc 100%);
+  box-shadow: 20px 20px 60px #8193a5, -20px -20px 60px #e9ffff;
+}
+
+.task i {
+  color: black;
+  float: right;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.comp .task {
+  /* background: rgba(0, 0, 0, 0.5); */
+  border-radius: 15px;
+  background: linear-gradient(145deg, #8ec5fc 2%, #e0c3fc 100%);
+  box-shadow: inset 20px 20px 60px #748494, inset -20px -20px 60px #f6ffff;
+}

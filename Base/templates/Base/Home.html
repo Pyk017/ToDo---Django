@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO DO - HOME</title>
+    <link rel="stylesheet" href="{% static 'Base/css/home.css' %}" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="tsparticles"></div>
+    <div class="container">
+      <div class="content">
+        <div class="heading">
+          <h2>To Do Application</h2>
+          <div class="typing">
+            <p class="typo"></p>
+          </div>
+        </div>
+        <div class="buttons">
+          <div class="login">
+            <a href="{% url 'login' %}" class="btn">Log In</a>
+          </div>
+          <div class="signup">
+            <a href="{% url 'register' %}" class="btn"><span>Sign Up</span></a>
+          </div>
+        </div>
+        <div class="icons">
+          <ul>
+            <li>
+              <a href="https://github.com/Pyk017" target="_blank">
+                <img
+                  src="{% static 'Base/icons/github.png' %}"
+                  alt="github"
+                  width="50"
+                  height="50"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="alert('E-mail :- prakharkumar506978@gmail.com')"
+              >
+                <img
+                  src="{% static 'Base/icons/gmail.png' %}"
+                  alt="gmail"
+                  width="50"
+                  height="50"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://t.me/Py"
+                onclick="alert('Telegram Username :- Py')"
+                target="_blank"
+              >
+                <img
+                  src="{% static 'Base/icons/telegram.png' %}"
+                  alt="telegram"
+                  width="50"
+                  height="50"
+              /></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/yushkumar7" target="_blank">
+                <img
+                  src="{% static 'Base/icons/twitter.png' %}"
+                  alt="twitter"
+                  width="50"
+                  height="50"
+              /></a>
+            </li>
+            <li>
+              <a href="#" onclick="alert('Contact Me :- 8874109902')">
+                <img
+                  src="{% static 'Base/icons/whatsapp.png' %}"
+                  alt="whatsapp"
+                  width="50"
+                  height="50"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.29.2/tsparticles.min.js"
+      integrity="sha512-BCawwABAvfbOiCjTAAsgG2SSs35AjAVlQq66rOTeQsS+2H/1OZsY3QEi3IAEQ0odsSxqVSHNqhBe3ut0pKl9ZA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript" src="{% static 'Base/js/app.js' %}"></script>
+    <script>
+      var typed = new Typed(".typo", {
+        strings: [
+          "Hi There!",
+          "How are you doing.",
+          "Try me.",
+          "To track your productivity.",
+          "Make every second count.",
+          "Time is less and running fast.",
+          "By - Prakhar Kumar Kashyap.",
+        ],
+        startDelay: 50,
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>

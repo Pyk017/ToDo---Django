@@ -1,0 +1,8 @@
+<h2>Task {{ tasks.id }}</h2>
+<ul>
+  <li>Title : {{ tasks.title }}</li>
+  <li>Description : {{ tasks.description }}:</li>
+  <li>Status : {{ tasks.complete }}</li>
+  <li>Date Created : {{ tasks.created }}</li>
+</ul>
+<a href="{% url 'task-list' %}">HOME</a>

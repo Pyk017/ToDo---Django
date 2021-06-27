@@ -1,0 +1,60 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'Base/css/base.css' %}" />
+  </head>
+  <body>
+    <div class="home">
+      <a href="{% url 'home' %}">
+        <img
+          src="{% static 'Base/icons/home.png' %}"
+          alt="home"
+          width="50"
+          height="50"
+      /></a>
+    </div>
+    <div class="form">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <h2>Login</h2>
+        <div class="input">
+          <div class="inputBox">
+            <label for="id_username">Username:</label>
+            <input
+              type="text"
+              name="username"
+              autofocus=""
+              autocapitalize="none"
+              autocomplete="username"
+              maxlength="150"
+              required=""
+              id="id_username"
+            />
+          </div>
+          <div class="inputBox">
+            <label for="id_password">Password:</label>
+            <input
+              type="password"
+              name="password"
+              autocomplete="current-password"
+              required=""
+              id="id_password"
+            />
+          </div>
+          <div class="inputBox">
+            <input type="submit" value="Log In" />
+          </div>
+        </div>
+        <p class="forget">
+          Forget Password ? <a href="{% url 'register' %}">Click Here</a>
+        </p>
+      </form>
+    </div>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+{% extends 'Base/main.html' %} {% block javascript %}
+<script>
+  $(".txtb").on("keyup", (e) => {
+    if (e.keyCode == 13 && $(".txtb").val() != "") {
+      console.log($(".txtb").val());
+      $(".txtb").val("");
+      $(".txtb").focus();
+      $(".header").submit();
+    }
+  });
+
+  $("._plus").click(() => {
+    $(".header").submit();
+  });
+</script>
+{% endblock %}
+<h2></h2>
+{% block content %}
+<form method="GET" class="header">
+  <input type="text" class="txtb" placeholder="Add a Task" name="new-task" />
+  <a href="#"><i class="fas fa-plus _plus"></i></a>
+</form>
+
+<div class="noncomp">
+  <h3>Not Completed</h3>
+  {% for task in tasks %} {% if task.complete == False %}
+  <div class="task" title="{{ task.id }}">
+    {{ task.title }}<a class="i" href="{% url 'task-delete' task.id %}"
+      ><i class="fas fa-trash-alt"></i></a
+    ><a class="i" href="{% url 'task-update' task.id%}"
+      ><i class="fas fa-check"></i
+    ></a>
+  </div>
+  {% endif %} {% endfor %}
+</div>
+<div class="comp">
+  <h3>Completed</h3>
+  {% for task in tasks %} {% if task.complete %}
+  <div class="task">
+    {{ task.title }}
+    <a class="i" href="{% url 'task-delete' task.id %}"
+      ><i class="fas fa-trash-alt"></i
+    ></a>
+  </div>
+  {% endif %} {% endfor %}
+</div>
+
+{% endblock %}
