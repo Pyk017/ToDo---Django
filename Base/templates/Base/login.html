@@ -19,7 +19,7 @@
       /></a>
     </div>
     <div class="form">
-      <form action="" method="POST">
+      <form method="POST">
         {% csrf_token %}
         <h2>Login</h2>
         <div class="input">
@@ -50,10 +50,10 @@
             <input type="submit" value="Log In" />
           </div>
         </div>
-        <p class="forget">
-          Forget Password ? <a href="{% url 'register' %}">Click Here</a>
-        </p>
       </form>
+      <p class="forget">
+        Forget Password ? <a href="{% url 'register' %}">Click Here</a>
+      </p>
     </div>
     <div></div>
   </body>
